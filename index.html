@@ -783,11 +783,61 @@
           </div>
         </div>
 
+        <div class="form-group">
+          <label>How will your cleaner have access into your home? *</label>
+          <select>
+            <option value="">Select…</option>
+            <option selected>I will be there the first time</option>
+            <option>I will be home during the clean</option>
+            <option>Key safe / lockbox</option>
+            <option>Key under mat</option>
+            <option>I will leave a key</option>
+            <option>Other (add note below)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>What flooring do you have? *</label>
+          <div style="display:flex;flex-direction:column;gap:8px;padding:12px 14px;border:1.5px solid #E5E7EB;border-radius:3px;background:var(--cream);">
+            <label style="display:flex;align-items:center;gap:10px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:13px;font-weight:400;color:var(--dark);">
+              <input type="checkbox" value="Timber" style="width:auto;accent-color:var(--teal);"/> Timber / Hardwood
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:13px;font-weight:400;color:var(--dark);">
+              <input type="checkbox" value="Laminate" style="width:auto;accent-color:var(--teal);"/> Laminate
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:13px;font-weight:400;color:var(--dark);">
+              <input type="checkbox" value="Tiles" style="width:auto;accent-color:var(--teal);"/> Tiles
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:13px;font-weight:400;color:var(--dark);">
+              <input type="checkbox" value="Marble" checked style="width:auto;accent-color:var(--teal);"/> Marble
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:13px;font-weight:400;color:var(--dark);">
+              <input type="checkbox" value="Carpet" checked style="width:auto;accent-color:var(--teal);"/> Carpet
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:13px;font-weight:400;color:var(--dark);">
+              <input type="checkbox" value="Vinyl" style="width:auto;accent-color:var(--teal);"/> Vinyl
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:13px;font-weight:400;color:var(--dark);">
+              <input type="checkbox" value="Mixed" style="width:auto;accent-color:var(--teal);"/> Mixed / Other
+            </label>
+          </div>
+        </div>
+
         <div class="form-section-label">Notes</div>
 
         <div class="form-group">
           <label>Special Instructions</label>
           <textarea placeholder="e.g. No shoes on carpet, dog is friendly, key under the mat…"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;">
+            <input type="checkbox" required style="width:auto;margin-top:3px;accent-color:var(--teal);"/>
+            <span style="font-size:12px;font-weight:400;color:var(--gray);text-transform:none;letter-spacing:0;line-height:1.6;">
+              <strong style="color:var(--dark);display:block;margin-bottom:2px;">Terms &amp; Conditions *</strong>
+              I agree to the <a href="#" style="color:var(--teal);text-decoration:underline;">terms and conditions</a> of Glo Cleaning Co, including the cancellation policy (50% fee within 48 hours), late payment fee ($15), and lockout policy (75% of service cost up to $150).
+            </span>
+          </label>
         </div>
 
         <button type="submit" class="submit-btn">Request My Booking</button>
