@@ -9,17 +9,17 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --teal:     #0D7A5F;
-    --teal-d:   #0A5E49;
-    --teal-l:   #E6F5F1;
-    --teal-m:   #B2DDD3;
-    --gold:     #C8973A;
-    --gold-l:   #FDF6E9;
-    --dark:     #1A2E28;
+    --teal:     #1E3A6E;
+    --teal-d:   #162D57;
+    --teal-l:   #EAF0FB;
+    --teal-m:   #B8CCF0;
+    --gold:     #F5C842;
+    --gold-l:   #FFFBEA;
+    --dark:     #0F1E3C;
     --gray:     #6B7280;
     --gray-l:   #F3F4F6;
     --white:    #FFFFFF;
-    --cream:    #FAFAF7;
+    --cream:    #F8F9FC;
   }
 
   html { scroll-behavior: smooth; }
@@ -38,9 +38,9 @@
     display: flex; align-items: center; justify-content: space-between;
     padding: 0 48px;
     height: 68px;
-    background: rgba(26, 46, 40, 0.96);
+    background: rgba(15, 30, 60, 0.96);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(200, 151, 58, 0.3);
+    border-bottom: 1px solid rgba(245, 200, 66, 0.3);
   }
   .nav-logo {
     font-family: 'Cormorant Garamond', serif;
@@ -88,8 +88,8 @@
     content: '';
     position: absolute; inset: 0;
     background-image:
-      radial-gradient(circle at 20% 80%, rgba(13,122,95,0.25) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, rgba(200,151,58,0.15) 0%, transparent 50%);
+      radial-gradient(circle at 20% 80%, rgba(30,58,110,0.25) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(245,200,66,0.15) 0%, transparent 50%);
     pointer-events: none;
   }
 
@@ -97,7 +97,7 @@
   .hero-left::after {
     content: '✦';
     position: absolute; bottom: 48px; right: 48px;
-    font-size: 120px; color: rgba(13,122,95,0.12);
+    font-size: 120px; color: rgba(30,58,110,0.12);
     line-height: 1;
   }
 
@@ -146,8 +146,8 @@
   }
   .badge-icon {
     width: 36px; height: 36px; border-radius: 50%;
-    background: rgba(13,122,95,0.3);
-    border: 1px solid rgba(13,122,95,0.5);
+    background: rgba(30,58,110,0.3);
+    border: 1px solid rgba(30,58,110,0.5);
     display: flex; align-items: center; justify-content: center;
     font-size: 14px; flex-shrink: 0;
   }
@@ -207,7 +207,7 @@
   .form-group select:focus,
   .form-group textarea:focus {
     border-color: var(--teal);
-    box-shadow: 0 0 0 3px rgba(13,122,95,0.1);
+    box-shadow: 0 0 0 3px rgba(30,58,110,0.1);
     background: var(--white);
   }
   .form-group textarea { min-height: 90px; resize: vertical; }
@@ -336,7 +336,7 @@
     content: '';
     position: absolute; top: -200px; right: -200px;
     width: 600px; height: 600px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(13,122,95,0.2) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(30,58,110,0.2) 0%, transparent 70%);
     pointer-events: none;
   }
 
@@ -354,11 +354,11 @@
   }
   .pkg:hover {
     border-color: var(--teal);
-    background: rgba(13,122,95,0.1);
+    background: rgba(30,58,110,0.1);
   }
   .pkg.featured {
     border-color: var(--gold);
-    background: rgba(200,151,58,0.08);
+    background: rgba(245,200,66,0.08);
   }
   .pkg-badge {
     position: absolute; top: -12px; left: 32px;
@@ -466,12 +466,12 @@
     background: var(--teal); color: var(--white);
     padding: 14px 24px; border-radius: 40px;
     font-size: 13px; font-weight: 600; text-decoration: none;
-    box-shadow: 0 8px 32px rgba(13,122,95,0.4);
+    box-shadow: 0 8px 32px rgba(30,58,110,0.4);
     transition: transform 0.2s, box-shadow 0.2s;
   }
   .float-book:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 40px rgba(13,122,95,0.5);
+    box-shadow: 0 12px 40px rgba(30,58,110,0.5);
   }
 
   /* ── ANIMATIONS ──────────────────────────────────────────────── */
@@ -755,16 +755,6 @@
           </select>
         </div>
 
-        <div class="form-group">
-          <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;">
-            <input type="checkbox" checked style="width:auto;margin-top:2px;accent-color:var(--teal);"/>
-            <span style="font-size:12px;font-weight:400;color:var(--gray);text-transform:none;letter-spacing:0;line-height:1.5;">
-              <strong style="color:var(--dark);display:block;margin-bottom:2px;">Laundry & dusting included ✓</strong>
-              Laundry and dusting in all rooms are automatically added to your service. I understand.
-            </span>
-          </label>
-        </div>
-
         <div class="form-section-label">Service Address</div>
 
         <div class="form-group">
@@ -798,29 +788,16 @@
 
         <div class="form-group">
           <label>What flooring do you have? *</label>
-          <div style="display:flex;flex-direction:column;gap:8px;padding:12px 14px;border:1.5px solid #E5E7EB;border-radius:3px;background:var(--cream);">
-            <label style="display:flex;align-items:center;gap:10px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:13px;font-weight:400;color:var(--dark);">
-              <input type="checkbox" value="Timber" style="width:auto;accent-color:var(--teal);"/> Timber / Hardwood
-            </label>
-            <label style="display:flex;align-items:center;gap:10px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:13px;font-weight:400;color:var(--dark);">
-              <input type="checkbox" value="Laminate" style="width:auto;accent-color:var(--teal);"/> Laminate
-            </label>
-            <label style="display:flex;align-items:center;gap:10px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:13px;font-weight:400;color:var(--dark);">
-              <input type="checkbox" value="Tiles" style="width:auto;accent-color:var(--teal);"/> Tiles
-            </label>
-            <label style="display:flex;align-items:center;gap:10px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:13px;font-weight:400;color:var(--dark);">
-              <input type="checkbox" value="Marble" checked style="width:auto;accent-color:var(--teal);"/> Marble
-            </label>
-            <label style="display:flex;align-items:center;gap:10px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:13px;font-weight:400;color:var(--dark);">
-              <input type="checkbox" value="Carpet" checked style="width:auto;accent-color:var(--teal);"/> Carpet
-            </label>
-            <label style="display:flex;align-items:center;gap:10px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:13px;font-weight:400;color:var(--dark);">
-              <input type="checkbox" value="Vinyl" style="width:auto;accent-color:var(--teal);"/> Vinyl
-            </label>
-            <label style="display:flex;align-items:center;gap:10px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:13px;font-weight:400;color:var(--dark);">
-              <input type="checkbox" value="Mixed" style="width:auto;accent-color:var(--teal);"/> Mixed / Other
-            </label>
-          </div>
+          <select>
+            <option value="">Select flooring type…</option>
+            <option>Timber / Hardwood</option>
+            <option>Laminate</option>
+            <option>Tiles</option>
+            <option selected>Marble</option>
+            <option>Carpet</option>
+            <option>Vinyl</option>
+            <option>Mixed / Other</option>
+          </select>
         </div>
 
         <div class="form-section-label">Notes</div>
@@ -831,17 +808,28 @@
         </div>
 
         <div class="form-group">
-          <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;">
-            <input type="checkbox" required style="width:auto;margin-top:3px;accent-color:var(--teal);"/>
-            <span style="font-size:12px;font-weight:400;color:var(--gray);text-transform:none;letter-spacing:0;line-height:1.6;">
-              <strong style="color:var(--dark);display:block;margin-bottom:2px;">Terms &amp; Conditions *</strong>
-              I agree to the <a href="#" style="color:var(--teal);text-decoration:underline;">terms and conditions</a> of Glo Cleaning Co, including the cancellation policy (50% fee within 48 hours), late payment fee ($15), and lockout policy (75% of service cost up to $150).
-            </span>
-          </label>
+          <div style="border:1.5px solid #E5E7EB;border-radius:3px;background:var(--cream);overflow:hidden;transition:border-color 0.2s;" id="tc-box">
+            <label for="tc-agree" style="display:flex;align-items:flex-start;gap:12px;cursor:pointer;padding:16px;user-select:none;">
+              <input type="checkbox" id="tc-agree" required style="width:18px;height:18px;margin-top:3px;cursor:pointer;accent-color:#1E3A6E;flex-shrink:0;"/>
+              <span style="font-size:12px;font-weight:400;color:var(--gray);text-transform:none;letter-spacing:0;line-height:1.7;">
+                <strong style="color:var(--dark);display:block;margin-bottom:4px;font-size:13px;">Terms &amp; Conditions *</strong>
+                I agree to the terms and conditions of Glo Cleaning Co, including the cancellation policy (50% fee within 48 hours), late payment fee ($15), and lockout policy (75% of service cost up to $150).
+              </span>
+            </label>
+            <a href="https://lucilleahost5-pixel.github.io/Globooking/#" target="_blank"
+               style="display:flex;align-items:center;justify-content:center;gap:8px;
+                      background:#1E3A6E;color:#fff;text-decoration:none;
+                      padding:12px 16px;font-size:12px;font-weight:600;letter-spacing:0.06em;
+                      text-transform:uppercase;transition:background 0.2s;border-top:1px solid rgba(0,0,0,0.08);"
+               onmouseover="this.style.background='#162D57'"
+               onmouseout="this.style.background='#1E3A6E'">
+              Read Full Terms &amp; Conditions ↗
+            </a>
+          </div>
         </div>
 
-        <button type="submit" class="submit-btn">Request My Booking</button>
-        <p class="form-note">🔒 Your details are safe with us. We'll confirm within 2 hours.<br>admin@glocleaningco.com · 0450 724 067</p>
+        <button type="submit" class="submit-btn" style="margin-top:16px;padding:18px;font-size:15px;letter-spacing:0.08em;box-shadow:0 4px 20px rgba(30,58,110,0.35);">Request My Booking ✦</button>
+        <p class="form-note" style="margin-top:14px;">🔒 Your details are safe with us. We'll confirm within 2 hours.<br>admin@glocleaningco.com · 0450 724 067</p>
 
       </form>
       <!-- END PLACEHOLDER FORM -->
